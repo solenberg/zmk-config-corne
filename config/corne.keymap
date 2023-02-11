@@ -13,7 +13,7 @@
 #define LYR_ADJ 3
 
 &mt {
-  quick-tap-ms = <200>;
+  tapping-term-ms = <200>;
 };
 
 / {
