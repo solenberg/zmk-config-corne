@@ -8,9 +8,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define LYR_BASE 0
-#define LYR_NUM 1
-#define LYR_NAV 2
-#define LYR_ADJ 3
+// #define LYR_NUM 1
+// #define LYR_NAV 2
+// #define LYR_ADJ 3
 
 &mt {
   tapping-term-ms = <200>;
@@ -37,50 +37,50 @@
       >;
     };
 
-    num_layer {
-      label = "NUM";
-      // +------------------------------+     +-----------------------------+
-      // |   | F1  | F2  | F3 | F4 | F5 |     | F6 | F7 | F8 | F9 | F10 |   |
-      // |   |  1  |  2  |  3 |  4 |  5 |     |  6 |  7 |  8 |  9 |   0 | ` |
-      // |   | F11 | F12 |  [ |  ] |    |     |    |  - |  = |  \ |     |   |
-      // +---------------|    |    |    |     |    |    |    |--------------+
-      bindings = <
-        &trans &kp F1  &kp F2  &kp F3   &kp F4   &kp F5    &kp F6 &kp F7    &kp F8    &kp F9   &kp F10 &trans
-        &trans &kp N1  &kp N2  &kp N3   &kp N4   &kp N5    &kp N6 &kp N7    &kp N8    &kp N9   &kp N0  &kp GRAVE
-        &trans &kp F11 &kp F12 &kp LBKT &kp RBKT &trans    &trans &kp MINUS &kp EQUAL &kp BSLH &trans  &trans
-                               &trans   &trans   &trans    &trans &trans    &trans
-      >;
-    };
+    // num_layer {
+    //   label = "NUM";
+    //   // +------------------------------+     +-----------------------------+
+    //   // |   | F1  | F2  | F3 | F4 | F5 |     | F6 | F7 | F8 | F9 | F10 |   |
+    //   // |   |  1  |  2  |  3 |  4 |  5 |     |  6 |  7 |  8 |  9 |   0 | ` |
+    //   // |   | F11 | F12 |  [ |  ] |    |     |    |  - |  = |  \ |     |   |
+    //   // +---------------|    |    |    |     |    |    |    |--------------+
+    //   bindings = <
+    //     &trans &kp F1  &kp F2  &kp F3   &kp F4   &kp F5    &kp F6 &kp F7    &kp F8    &kp F9   &kp F10 &trans
+    //     &trans &kp N1  &kp N2  &kp N3   &kp N4   &kp N5    &kp N6 &kp N7    &kp N8    &kp N9   &kp N0  &kp GRAVE
+    //     &trans &kp F11 &kp F12 &kp LBKT &kp RBKT &trans    &trans &kp MINUS &kp EQUAL &kp BSLH &trans  &trans
+    //                            &trans   &trans   &trans    &trans &trans    &trans
+    //   >;
+    // };
 
-    nav_layer {
-      label = "NAV";
-      // +------------------------------+     +------------------------------+
-      // |   |   | BCK | HME | PGUP |   |     |     |     |    |     |   |   |
-      // |   |   | FWD | END | PGDN |   |     | LFT | DWN | UP | RGT |   |   |
-      // |   |   |     |     |      |   |     |     |     |    |     |   |   |
-      // +-------------|     |      |   |     |     |     |    |-------------+
-      bindings = <
-        &trans &trans &kp C_AC_BACK    &kp HOME &kp PG_UP &trans    &trans   &trans   &trans &trans    &trans  &trans
-        &trans &trans &kp C_AC_FORWARD &kp END  &kp PG_DN &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &trans
-        &trans &trans &trans           &trans   &trans    &trans    &trans   &trans   &trans &trans    &trans  &trans
-                                       &trans   &trans    &trans    &trans   &trans   &trans
-      >;
-    };
+    // nav_layer {
+    //   label = "NAV";
+    //   // +------------------------------+     +------------------------------+
+    //   // |   |   | BCK | HME | PGUP |   |     |     |     |    |     |   |   |
+    //   // |   |   | FWD | END | PGDN |   |     | LFT | DWN | UP | RGT |   |   |
+    //   // |   |   |     |     |      |   |     |     |     |    |     |   |   |
+    //   // +-------------|     |      |   |     |     |     |    |-------------+
+    //   bindings = <
+    //     &trans &trans &kp C_AC_BACK    &kp HOME &kp PG_UP &trans    &trans   &trans   &trans &trans    &trans  &trans
+    //     &trans &trans &kp C_AC_FORWARD &kp END  &kp PG_DN &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &trans
+    //     &trans &trans &trans           &trans   &trans    &trans    &trans   &trans   &trans &trans    &trans  &trans
+    //                                    &trans   &trans    &trans    &trans   &trans   &trans
+    //   >;
+    // };
 
-    adj_layer {
-      label = "ADJ";
-      // +-------------------------------------+     +--------------------------------+
-      // | BTCLR | BT1 | BT2 | BT3 | BT4 | BT5 |     | BASE | V+ | PRV | BRUP |   |   |
-      // |       |     |     |     |     |     |     |      | V- | NXT | BRDN |   |   |
-      // | CAPS  |     |     |     |     |     |     |      | V0 | PLY |      |   |   |
-      // +-------------------|     |     |     |     |      |    |     |--------------+
-      bindings = <
-        &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &to LYR_BASE &kp C_VOL_UP &kp C_PREV &kp C_BRI_UP &trans &trans
-        &trans     &trans       &trans       &trans       &trans       &trans          &trans       &kp C_VOL_DN &kp C_NEXT &kp C_BRI_DN &trans &trans
-        &kp CAPS   &trans       &trans       &trans       &trans       &trans          &trans       &kp C_MUTE   &kp PP         &trans   &trans &trans
-                                             &trans       &trans       &trans          &trans       &trans       &trans
-      >;
-    };
+    // adj_layer {
+    //   label = "ADJ";
+    //   // +-------------------------------------+     +--------------------------------+
+    //   // | BTCLR | BT1 | BT2 | BT3 | BT4 | BT5 |     | BASE | V+ | PRV | BRUP |   |   |
+    //   // |       |     |     |     |     |     |     |      | V- | NXT | BRDN |   |   |
+    //   // | CAPS  |     |     |     |     |     |     |      | V0 | PLY |      |   |   |
+    //   // +-------------------|     |     |     |     |      |    |     |--------------+
+    //   bindings = <
+    //     &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &to LYR_BASE &kp C_VOL_UP &kp C_PREV &kp C_BRI_UP &trans &trans
+    //     &trans     &trans       &trans       &trans       &trans       &trans          &trans       &kp C_VOL_DN &kp C_NEXT &kp C_BRI_DN &trans &trans
+    //     &kp CAPS   &trans       &trans       &trans       &trans       &trans          &trans       &kp C_MUTE   &kp PP         &trans   &trans &trans
+    //                                          &trans       &trans       &trans          &trans       &trans       &trans
+    //   >;
+    // };
   };
 };
 
