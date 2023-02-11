@@ -1,19 +1,22 @@
 # Corne Keyboard Layout
 
-While I wanted a keyboard with fewer keys, I also juggle not wanting to chord too
-often.  This layout is my first draft and I will try to update this as changes
-get made.
-
 ## Keymap
 
-### Base
+> This is a first draft. The keymap is subject to change at random, but I will
+> try to keep this updated as I go. 
+
+I decided to go with a wireless build, so there aren't any LEDs on this board.
+If I decide I like this, I may pick up a second and make a wired version for my 
+desk.
+
+### BASE
 
 For the most part, this is a standard qwerty layout. I am using tap for
 space and return, and hold for shift on the innermost thumb keys.
 
-[NAV](#Navigation) is a cursor navigation and media control layer  
-[NUM](#Numbers) is a number layer and F# key layer  
-[SYM](#Symbols) is a symbol layer accessed by holding both `NAV` and `NUM`
+`NAV` is a cursor navigation and media control layer  
+`NUM` is a number layer and F# key layer  
+`SYM` is a symbol layer accessed by holding both `NAV` and `NUM`
 
 ```text
 +------------------------+     +-----------------------+
@@ -25,11 +28,11 @@ space and return, and hold for shift on the innermost thumb keys.
                   \\=======SYM=======//
 ```
 
-### Navigation
+### NAV
 
-I prefer cross keyboard modifiers, so Nav is accessed with the right thumb and 
+I prefer cross keyboard modifiers, so the layer is accessed with the right thumb and
 keys are accessed with the left hand. This is a basic cursor navigation layer
- with music controls.
+with music controls.
 
 ```text
 +-------------------------+     +-----------------------+
@@ -40,10 +43,10 @@ keys are accessed with the left hand. This is a basic cursor navigation layer
 ```
 
 
-### Numbers
+### NUM
 
-For the most part I try not to use layers on the same hand, but I don't access 
-my Function keys all that often so I'm testing out keeping the F# keys on the 
+For the most part I try not to use layers on the same hand, but I don't access
+my Function keys all that often so I'm testing out keeping the F# keys on the
 left hand. The right half also has some of my commonly used symbols.
 
 ```text
@@ -54,10 +57,10 @@ left hand. The right half also has some of my commonly used symbols.
 +-----------|   |   |   |     |   |   |   |-----------+
 ```
 
-### Symbols
+### SYM
 
-I wanted to have a dedicated symbol row just in case.  I'm still testing this 
-layout. This Layer also has a toggle to access the Bluetooth control layer.
+I wanted to have a dedicated symbol row just in case. I'm still testing this
+layout. This layer also has a toggle to access the Bluetooth control layer.
 
 ```text
 +------------------------+     +-----------------------+
@@ -67,9 +70,10 @@ layout. This Layer also has a toggle to access the Bluetooth control layer.
 +------------|   |   |   |     |   |   |   |-----------+
 ```
 
-### Bluetooth
+### BLT
 
-This layer is just to manage my BT devices. `BASE` will take you back to the base layer.
+This layer is just to manage my BT connections. `BASE` will take you back to the
+base layer.
 
 ```text
 +--------------------------+     +-----------------------+
