@@ -7,10 +7,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define LYR_BASE 0
-#define LYR_NUM 1
-#define LYR_NAV 2
-#define LYR_ADJ 3
+#define BASE 0
+#define NUM 1
+#define NAV 2
+#define ADJ 3
 
 &mt {
   tapping-term-ms = <200>;
@@ -20,7 +20,7 @@
   keymap {
     compatible = "zmk,keymap";
 
-    base_layer {
+    base {
       label = "BASE";
       // +--------------------------+     +-------------------------+
       // | ESC  | Q | W | E | R | T |     | Y | U | I | O | P | DEL |
@@ -33,41 +33,41 @@
         &kp ESC   &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I     &kp O   &kp P     &kp DEL
         &kp TAB   &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K     &kp L   &kp SEMI  &kp SQT
         &kp LCTRL &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M &kp COMMA &kp DOT &kp FSLH  &kp LGUI
-            &kp LALT  &mo LYR_NUM &mt LSHFT RET    &mt RSHFT SPACE &mo LYR_NAV &kp BSPC
+                 &kp LALT &mo NUM &mt LSHFT RET    &mt RSHFT SPACE &mo NAV &kp BSPC
       >;
     };
 
-    num_layer {
+    num {
       label = "NUM";
-      // +------------------------------+     +-----------------------------+
-      // |   | F1  | F2  | F3 | F4 | F5 |     | F6 | F7 | F8 | F9 | F10 |   |
-      // |   |  1  |  2  |  3 |  4 |  5 |     |  6 |  7 |  8 |  9 |   0 | ` |
-      // |   | F11 | F12 |  [ |  ] |    |     |    |  - |  = |  \ |     |   |
-      // +---------------|    |    |    |     |    |    |    |--------------+
+      // +----------------------------+     +-----------------------+
+      // |   |   | F7 | F8 | F9 | F10 |     | ( | 7 | 8 | 9 | \ | ) |
+      // |   |   | F4 | F5 | F6 | F11 |     | [ | 4 | 5 | 6 | - | ] |
+      // |   |   | F1 | F2 | F3 | F12 |     | 0 | 1 | 2 | 3 | = | ` |
+      // +------------|    |    |     |     |   |   |   |-----------+
       bindings = <
-        &trans &kp F1  &kp F2  &kp F3   &kp F4   &kp F5    &kp F6 &kp F7    &kp F8    &kp F9   &kp F10 &trans
-        &trans &kp N1  &kp N2  &kp N3   &kp N4   &kp N5    &kp N6 &kp N7    &kp N8    &kp N9   &kp N0  &kp GRAVE
-        &trans &kp F11 &kp F12 &kp LBKT &kp RBKT &trans    &trans &kp MINUS &kp EQUAL &kp BSLH &trans  &trans
-                               &trans   &trans   &trans    &trans &trans    &trans
+        &trans &trans &kp F7 &kp F8 &kp F9 &kp F10    &kp LPAR &kp N7 &kp N8 &kp N9 &kp BSLH  &kp RPAR
+        &trans &trans &kp F4 &kp F5 &kp F6 &kp F11    &kp LBKT &kp N4 &kp N5 &kp N6 &kp MINUS &kp RBKT
+        &trans &trans &kp F1 &kp F2 &kp F3 &kp F12    &kp N0   &kp N1 &kp N2 &kp N3 &kp EQUAL &kp GRAVE
+                             &trans &trans &trans     &trans   &trans &trans
       >;
     };
 
-    nav_layer {
+    nav {
       label = "NAV";
-      // +------------------------------+     +------------------------------+
-      // |   |   | BCK | HME | PGUP |   |     |     |     |    |     |   |   |
-      // |   |   | FWD | END | PGDN |   |     | LFT | DWN | UP | RGT |   |   |
-      // |   |   |     |     |      |   |     |     |     |    |     |   |   |
-      // +-------------|     |      |   |     |     |     |    |-------------+
+      // +-------------------------------------+     +-----------------------+
+      // | PRV | HME  | BCK | UP  | FWD | END  |     |   |   |   |   |   |   |
+      // | PP  | PGUP | LFT | DN  | RGT | PGDN |     |   |   |   |   |   |   |
+      // | NXT |      | CUT | CPY | PST |      |     |   |   |   |   |   |   |
+      // +------------------|     |     |      |     |   |   |   |-----------+
       bindings = <
-        &trans &trans &kp C_AC_BACK    &kp HOME &kp PG_UP &trans    &trans   &trans   &trans &trans    &trans  &trans
-        &trans &trans &kp C_AC_FORWARD &kp END  &kp PG_DN &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &trans
-        &trans &trans &trans           &trans   &trans    &trans    &trans   &trans   &trans &trans    &trans  &trans
-                                       &trans   &trans    &trans    &trans   &trans   &trans
+        &kp C_PREV &kp HOME  &kp C_AC_BACK &kp UP        &kp C_AC_FORWARD &kp END      &trans &trans &trans &trans &trans &trans
+        &kp C_PP   &kp PG_UP &kp LEFT      &kp DOWN      &kp RIGHT        &kp PG_DN    &trans &trans &trans &trans &trans &trans
+        &kp C_NEXT &trans    &kp C_AC_CUT  &kp C_AC_COPY &kp C_AC_PASTE   &trans       &trans &trans &trans &trans &trans &trans
+                                           &trans        &trans           &trans       &trans &trans &trans
       >;
     };
 
-    adj_layer {
+    adj {
       label = "ADJ";
       // +-------------------------------------+     +--------------------------------+
       // | BTCLR | BT1 | BT2 | BT3 | BT4 | BT5 |     | BASE | V+ | PRV | BRUP |   |   |
@@ -88,8 +88,8 @@
   conditional_layers {
     compatible = "zmk,conditional-layers";
     tri_layer {
-      if-layers = <LYR_NUM LYR_NAV>;
-      then-layer = <LYR_ADJ>;
+      if-layers = <NUM NAV>;
+      then-layer = <ADJ>;
     };
   };
 };
