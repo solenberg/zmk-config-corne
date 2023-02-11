@@ -10,7 +10,7 @@
 #define BASE 0
 #define NUM 1
 #define NAV 2
-#define ADJ 3
+#define SYM 3
 #define BLT 4
 
 &mt {
