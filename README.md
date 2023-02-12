@@ -1,8 +1,6 @@
-![workflow](https://github.com/solenberg/zmk-firmware-corne/actions/workflows/build.yml/badge.svg)
+![workflow](https://github.com/solenberg/zmk-firmware-corne/actions/workflows/build.yaml/badge.svg)
 
 # Corne Keyboard Layout
-
-## Key map
 
 The key map is subject to change as I discover my needs but I will try to keep 
 this updated. 
