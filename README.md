@@ -1,4 +1,4 @@
-![workflow](https://github.com/solenberg/zmk-firmware-corne/actions/workflows/build.yaml/badge.svg)
+![workflow](https://github.com/solenberg/zmk-config-corne/actions/workflows/build.yml/badge.svg)
 
 # Corne Keyboard Layout
 
@@ -7,8 +7,8 @@ this updated.
 
 ### BASE
 
-[NAV](#nav) is a cursor navigation and media control layer  
 [NUM](#num) is a number and function key layer  
+[NAV](#nav) is a cursor navigation and media control layer    
 [SYM](#sym) is a symbol layer accessed by holding both `NAV` and `NUM`. It also 
 has a toggle to go to [BLT](#blt) my Bluetooth control layer.
 
@@ -25,20 +25,6 @@ has a toggle to go to [BLT](#blt) my Bluetooth control layer.
                    \\======SYM======//
 ```
 
-### NAV
-
-```
-+---+---+---+---+---+---+     +---+---+---+---+---+---+
-|PRV|HME|BCK|UP |FWD|END|     |   |   |   |   |   |   |
-+---+---+---+---+---+---+     +---+---+---+---+---+---+
-|PP |PGU|LFT|DN |RGT|PGD|     |   |   |   |   |   |   |
-+---+---+---+---+---+---+     +---+---+---+---+---+---+
-|NXT|   |CUT|CPY|PST|   |     |   |   |   |   |   |   |
-+---+---+---+---+---+---+     +---+---+---+---+---+---+
-            |   |   |   |     |   |   |   |
-            +---+---+---+     +---+---+---+
-```
-
 ### NUM
 
 ```
@@ -48,6 +34,20 @@ has a toggle to go to [BLT](#blt) my Bluetooth control layer.
 |   |   |F4 |F5 |F6 |F11|     | [ | 4 | 5 | 6 | - | ] |
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
 |   |   |F1 |F2 |F3 |F12|     | 0 | 1 | 2 | 3 | = |   |
++---+---+---+---+---+---+     +---+---+---+---+---+---+
+            |   |   |   |     |   |   |   |
+            +---+---+---+     +---+---+---+
+```
+
+### NAV
+
+```
++---+---+---+---+---+---+     +---+---+---+---+---+---+
+|PRV|HME|BCK|UP |FWD|END|     |   |   |   |   |   |   |
++---+---+---+---+---+---+     +---+---+---+---+---+---+
+|PP |PGU|LFT|DN |RGT|PGD|     |   |   |   |   |   |   |
++---+---+---+---+---+---+     +---+---+---+---+---+---+
+|NXT|   |CUT|CPY|PST|   |     |   |   |   |   |   |   |
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
             |   |   |   |     |   |   |   |
             +---+---+---+     +---+---+---+
