@@ -23,13 +23,16 @@
 
     base {
       label = "BASE";
-      // +------------------------+     +-----------------------+
+      // +----+---+---+---+---+---+     +---+---+---+---+---+---+
       // |ESC | Q | W | E | R | T |     | Y | U | I | O | P |DEL|
+      // +----+---+---+---+---+---+     +---+---+---+---+---+---+
       // |TAB | A | S | D | F | G |     | H | J | K | L | ; | ' |
+      // +----+---+---+---+---+---+     +---+---+---+---+---+---+
       // |CTRL| Z | X | C | V | B |     | N | M | , | . | / |GUI|
-      // +------------|ALT|NUM|SHF|     |SHF|NAV|BKS|-----------+
-      //                    | |ENT|     |SPC| |
-      //                    \=======SYM=======/
+      // +----+---+---+---+---+---+     +---+---+---+---+---+---+
+      //              |ALT|NUM|SHF|     |SHF|NAV|BKS|
+      //              +---+---|ENT|     |SPC|---+---+ 
+      //                    \\======SYM======//
       bindings = <
         &kp ESC   &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U &kp I     &kp O   &kp P     &kp DEL
         &kp TAB   &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K     &kp L   &kp SEMI  &kp SQT
@@ -40,26 +43,34 @@
 
     num {
       label = "NUM";
-      // +-----------------------+     +-----------------------+
-      // |   |   |F7 |F8 |F9 |F10|     | ( | 7 | 8 | 9 | \ | ) |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // | ` |   |F7 |F8 |F9 |F10|     | ( | 7 | 8 | 9 | \ | ) |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   |   |F4 |F5 |F6 |F11|     | [ | 4 | 5 | 6 | - | ] |
-      // |   |   |F1 |F2 |F3 |F12|     | 0 | 1 | 2 | 3 | = | ` |
-      // +-----------|   |   |   |     |   |   |   |-----------+
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |   |F1 |F2 |F3 |F12|     | 0 | 1 | 2 | 3 | = |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      //             |   |   |   |     |   |   |   |
+      //             +---+---+---+     +---+---+---+
       bindings = <
-        &trans &trans &kp F7 &kp F8 &kp F9 &kp F10    &kp LPAR &kp N7 &kp N8 &kp N9 &kp BSLH  &kp RPAR
-        &trans &trans &kp F4 &kp F5 &kp F6 &kp F11    &kp LBKT &kp N4 &kp N5 &kp N6 &kp MINUS &kp RBKT
-        &trans &trans &kp F1 &kp F2 &kp F3 &kp F12    &kp N0   &kp N1 &kp N2 &kp N3 &kp EQUAL &kp GRAVE
+        &kp GRAVE &trans &kp F7 &kp F8 &kp F9 &kp F10    &kp LPAR &kp N7 &kp N8 &kp N9 &kp BSLH  &kp RPAR
+        &trans    &trans &kp F4 &kp F5 &kp F6 &kp F11    &kp LBKT &kp N4 &kp N5 &kp N6 &kp MINUS &kp RBKT
+        &trans    &trans &kp F1 &kp F2 &kp F3 &kp F12    &kp N0   &kp N1 &kp N2 &kp N3 &kp EQUAL &trans
                              &trans &trans &trans     &trans   &trans &trans
       >;
     };
 
     nav {
       label = "NAV";
-      // +-------------------------+     +-----------------------+
-      // |PRV|HME |BCK|UP |FWD|END |     |   |   |   |   |   |   |
-      // |PP |PGUP|LFT|DN |RGT|PGDN|     |   |   |   |   |   |   |
-      // |NXT|    |CUT|CPY|PST|    |     |   |   |   |   |   |   |
-      // +------------|   |   |    |     |   |   |   |-----------+
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |PRV|HME|BCK|UP |FWD|END|     |   |   |   |   |   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |PP |PGU|LFT|DN |RGT|PGD|     |   |   |   |   |   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |NXT|   |CUT|CPY|PST|   |     |   |   |   |   |   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      //             |   |   |   |     |   |   |   |
+      //             +---+---+---+     +---+---+---+
       bindings = <
         &kp C_PREV &kp HOME  &kp C_AC_BACK &kp UP        &kp C_AC_FORWARD &kp END      &trans &trans &trans &trans &trans &trans
         &kp C_PP   &kp PG_UP &kp LEFT      &kp DOWN      &kp RIGHT        &kp PG_DN    &trans &trans &trans &trans &trans &trans
@@ -70,26 +81,34 @@
 
     sym {
       label = "SYM";
-      // +------------------------+     +-----------------------+
-      // |BLT |   |   |   |   |   |     |   |   |   |   |   |   |
-      // | ~  | ! | @ | # | $ | % |     | ^ | & | * | ( | ) |"|"|
-      // |CAPS|   |   |   |   |   |     |   |   |   |   |   |   |
-      // +------------|   |   |   |     |   |   |   |-----------+
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |   |   |   |   |BLT|     |   |   |   |   |   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // | ~ | ! | @ | # | $ | % |     | ^ | & | * | ( | ) | | |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |   |   |   |   |CAP|     |   |   |   |   |   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      //             |   |   |   |     |   |   |   |
+      //             +---+---+---+     +---+---+---+
       bindings = <
-        &to BLT   &trans   &trans &trans   &trans   &trans    &trans    &trans   &trans    &trans   &trans   &trans
-        &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR &trans    &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp PIPE
-        &kp CAPS  &trans   &trans &trans   &trans   &trans    &trans    &trans   &trans    &trans   &trans   &trans
-                                  &trans   &trans   &trans    &trans    &trans   &trans
+        &trans    &trans   &trans &trans   &trans   &to BLT        &trans    &trans   &trans    &trans   &trans   &trans
+        &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PERCENT    &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp PIPE
+        &trans    &trans   &trans &trans   &trans   &kp CAPS       &trans    &trans   &trans    &trans   &trans   &trans
+                                  &trans   &trans   &trans         &trans    &trans   &trans
       >;
     };
 
     blt {
       label = "BLT";
-      // +--------------------------+     +-----------------------+
+      // +-----+---+---+---+---+----+     +---+---+---+---+---+---+
       // |     |   |   |   |   |BASE|     |   |   |   |   |   |   |
+      // +-----+---+---+---+---+----+     +---+---+---+---+---+---+
       // |BTCLR|BT1|BT2|BT3|BT4|BT5 |     |   |   |   |   |   |   |
+      // +-----+---+---+---+---+----+     +---+---+---+---+---+---+
       // |     |   |   |   |   |    |     |   |   |   |   |   |   |
-      // +-------------|   |   |    |     |   |   |   |-----------+
+      // +-----+---+---+---+---+----+     +---+---+---+---+---+---+
+      //               |   |   |    |     |   |   |   |
+      //               +---+---+----+     +---+---+---+
       bindings = <
         &trans     &trans       &trans       &trans       &trans       &to BASE        &trans &trans &trans &trans &trans &trans
         &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &trans &trans &trans &trans &trans &trans
