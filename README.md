@@ -1,4 +1,4 @@
-![workflow](https://github.com/solenberg/zmk-config-corne/actions/workflows/build.yml/badge.svg)
+[![.github/workflows/build.yml](https://github.com/solenberg/zmk-config-corne/actions/workflows/build.yml/badge.svg?event=workflow_run)](https://github.com/solenberg/zmk-config-corne/actions/workflows/build.yml)
 
 # Keyboard Layout
 
