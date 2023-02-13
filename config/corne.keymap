@@ -16,7 +16,7 @@
 #define FUN 6
 
 &mt {
-  tapping-term-ms = <190>;
+  tapping-term-ms = <220>;
 };
 
 / {
@@ -45,26 +45,26 @@
     };
 
     num {
-      label = "Number";
+      label = "Num";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   |   |   |   |   |   |     | [ | 7 | 8 | 9 | ] |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   |SUP|ALT|CTR|SHF|   |     | ; | 4 | 5 | 6 | = |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |   |     | ` | 1 | 2 | 3 | \ |   |
+      // |   |   |   |   |   |   |     | ' | 1 | 2 | 3 | \ |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |   |   |   |     | . | 0 | - |
       //             +---+---+---+     +---+---+---+
       bindings = <
         &trans &trans   &trans   &trans    &trans    &trans    &kp LBKT  &kp N7 &kp N8 &kp N9 &kp RBKT  &trans
         &trans &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans    &kp SEMI  &kp N4 &kp N5 &kp N6 &kp EQUAL &trans
-        &trans &trans   &trans   &trans    &trans    &trans    &kp GRAVE &kp N1 &kp N2 &kp N3 &kp BSLH  &trans
+        &trans &trans   &trans   &trans    &trans    &trans    &kp SQT &kp N1 &kp N2 &kp N3 &kp BSLH  &trans
                                  &trans    &trans    &trans    &kp DOT   &kp N0 &kp MINUS
       >;
     };
 
     nav {
-      label = "Navigate";
+      label = "Nav";
       // +---+---+---+---+---+---+     +----+---+---+---+----+---+
       // |   |   |   |   |   |   |     |REDO|PST|CPY|CUT|UNDO|   |
       // +---+---+---+---+---+---+     +----+---+---+---+----+---+
@@ -83,7 +83,7 @@
     };
 
     btn {
-      label = "Button";
+      label = "Bttn";
       // +---+----+---+---+---+----+     +----+---+---+---+----+---+
       // |   |UNDO|CUT|CPY|PST|REDO|     |REDO|PST|CPY|CUT|UNDO|   |
       // +---+----+---+---+---+----+     +----+---+---+---+----+---+
@@ -121,20 +121,20 @@
     };
 
     sym {
-      label = "Symbol";
+      label = "Sym";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   | { | & | * | ( | ) |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   | : | $ | % | ^ | + |     |   |SHF|CTR|ALT|SUP|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | ~ | ! | @ | # | | |     |   |   |   |   |   |   |
+      // |   | ` | ! | @ | # | | |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
         &trans &kp RBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp RPAR      &trans &trans    &trans    &trans   &trans   &trans
         &trans &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS      &trans &kp RSHFT &kp RCTRL &kp RALT &kp RGUI &trans
-        &trans &kp TILDE &kp EXCL   &kp AT      &kp POUND &kp PIPE      &trans &trans    &trans    &trans   &trans   &trans
+        &trans &kp GRAVE &kp EXCL   &kp AT      &kp POUND &kp PIPE      &trans &trans    &trans    &trans   &trans   &trans
                                     &trans      &trans    &trans        &trans &trans    &trans 
       >;
     };
