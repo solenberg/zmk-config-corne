@@ -25,21 +25,21 @@
     base {
       label = "Base";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | Q | W | E | R | T |     | Y | U | I | O | P |   |
+      // |ALT| Q | W | E | R | T |     | Y | U | I | O | P | - |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | A | S | D | F | G |     | H | J | K | L | ; |   |
-      //      ctr alt gui shf               shf gui alt ctr
+      // |CTL| A | S | D | F | G |     | H | J | K | L | ; | ' |
+      //                  shf               shf
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | Z | X | C | V | B |     | N | M | , | . | / |   |
+      // |GUI| Z | X | C | V | B |     | N | M | , | . | / |SHF|
       //      btn                                       btn
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |ESC|TAB|ENT|     |SPC|BKS|DEL| 
       //              med nav num       sym     fun
       bindings = <
-        &trans &kp Q       &kp W      &kp E       &kp R       &kp T            &kp Y        &kp U        &kp I      &kp O      &kp P          &trans
-        &trans &mt LCTRL A &mt LALT S &mt LGUI D  &mt LSHFT F &kp G            &kp H        &mt RSHFT J  &mt RGUI K &mt RALT L &mt RCTRL SEMI &trans
-        &trans &kp Z       &kp X      &kp C       &kp V       &kp B            &kp N        &kp M        &kp COMMA  &kp DOT    &kp FSLH       &trans
-                                      &lt MED ESC &lt NUM TAB &lt NAV RET      &kp SPACE    &lt SYM BSPC &lt FUN DEL
+        &kp LALT  &kp Q &kp W &kp E  &kp R       &kp T      &kp Y         &kp U       &kp I     &kp O   &kp P    &
+        &kp LCTRL &kp A &kp S &kp D  &mt LSHFT F &kp G      &kp H         &mt RSHFT J &kp K     &kp L   &kp SEMI &kp SQT
+        &kp LGUI  &kp Z &kp X &kp C  &kp V       &kp B      &kp N         &kp M       &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                   &lt MED ESC &lt NUM TAB &lt NAV RET      &lt SYM SPACE &kp BSPC    &lt FUN DEL
       >;
     };
 
@@ -107,7 +107,7 @@
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   | : | $ | % | ^ | + |     |   |SHF|CTR|ALT|SUP|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | ` | ! | @ | # | | |     |   |   |   |   |   |   |
+      // |   | ~ | ! | @ | # | | |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
@@ -124,16 +124,16 @@
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   |F12|F7 |F8 |F9 |   |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |F11|F4 |F5 |F6 |   |     |   |SHF|CTR|ALT|SUP|   |
+      // |   |F11|F4 |F5 |F6 |   |     |   |SHF|GUI|ALT|CTR|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   |F10|F1 |F2 |F3 |   |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &trans &kp F12 &kp F7 &kp F8 &kp F9 &trans      &trans &trans    &trans    &trans   &trans   &trans
-        &trans &kp F11 &kp F4 &kp F5 &kp F6 &trans      &trans &kp RSHFT &kp RGUI  &kp RALT &kp RCTL &trans
-        &trans &kp F10 &kp F1 &kp F2 &kp F3 &trans      &trans &trans    &trans    &trans   &trans   &trans
+        &trans &kp F12 &kp F7 &kp F8 &kp F9 &trans      &trans &trans    &trans    &trans   &trans    &trans
+        &trans &kp F11 &kp F4 &kp F5 &kp F6 &trans      &trans &kp RSHFT &kp RGUI  &kp RALT &kp RCTRL &trans
+        &trans &kp F10 &kp F1 &kp F2 &kp F3 &trans      &trans &trans    &trans    &trans   &trans    &trans
                               &trans &trans &trans      &trans &trans    &trans
       >;
     };

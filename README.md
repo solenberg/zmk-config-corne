@@ -1,26 +1,27 @@
+
 [![.github/workflows/build.yml](https://github.com/solenberg/zmk-config-corne/actions/workflows/build.yml/badge.svg?event=workflow_run)](https://github.com/solenberg/zmk-config-corne/actions/workflows/build.yml)
 
 # Keyboard Layout
 
 This is a modified miryoku layout.  I wanted to test this out.
 
-### Base
+## Base
 
 ```text
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
-|   | Q | W | E | R | T |     | Y | U | I | O | P |   |
+|ALT| Q | W | E | R | T |     | Y | U | I | O | P | - |
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
-|   | A | S | D | F | G |     | H | J | K | L | ; |   |
+|CTL| A | S | D | F | G |     | H | J | K | L | ; | ' |
 |   |ctr|alt|gui|shf|   |     |   |shf|gui|alt|ctr|   |
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
-|   | Z | X | C | V | B |     | N | M | , | . | / |   |
+|GUI| Z | X | C | V | B |     | N | M | , | . | / |SHF|
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
             |ESC|TAB|ENT|     |SPC|BKS|DEL| 
             |med|nav|num|     |sym|   |fun|
             +---+---+---+     +---+---+---+
 ```
 
-### Number
+## Number
 
 ```text
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
@@ -34,7 +35,7 @@ This is a modified miryoku layout.  I wanted to test this out.
             +---+---+---+     +---+---+---+
 ```
 
-### Navigation
+## Navigation
 
 ```text
 +---+---+---+---+---+---+     +----+---+---+---+----+---+
@@ -48,7 +49,7 @@ This is a modified miryoku layout.  I wanted to test this out.
             +---+---+---+     +----+---+---+
 ```
 
-### media
+## media
 
 ```text
 +---+---+---+---+---+----+     +---+---+---+---+---+---+
@@ -62,7 +63,7 @@ This is a modified miryoku layout.  I wanted to test this out.
             +---+---+----+     +---+---+---+
 ```
 
-### Symbol
+## Symbol
 
 ```text
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
@@ -76,7 +77,7 @@ This is a modified miryoku layout.  I wanted to test this out.
             +---+---+---+     +---+---+---+
 ```
 
-### Function
+## Function
 
 ```text
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
