@@ -36,7 +36,7 @@
       //             |ESC|TAB|ENT|     |SPC|BKS|DEL| 
       //              med nav num       sym     fun
       bindings = <
-        &kp LALT  &kp Q &kp W &kp E  &kp R       &kp T      &kp Y         &kp U       &kp I     &kp O   &kp P    &
+        &kp LALT  &kp Q &kp W &kp E  &kp R       &kp T      &kp Y         &kp U       &kp I     &kp O   &kp P    &kp MINUS
         &kp LCTRL &kp A &kp S &kp D  &mt LSHFT F &kp G      &kp H         &mt RSHFT J &kp K     &kp L   &kp SEMI &kp SQT
         &kp LGUI  &kp Z &kp X &kp C  &kp V       &kp B      &kp N         &kp M       &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                    &lt MED ESC &lt NUM TAB &lt NAV RET      &lt SYM SPACE &kp BSPC    &lt FUN DEL
