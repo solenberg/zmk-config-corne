@@ -1,15 +1,12 @@
-
-[![.github/workflows/build.yml](https://github.com/solenberg/zmk-config-corne/actions/workflows/build.yml/badge.svg?event=workflow_run)](https://github.com/solenberg/zmk-config-corne/actions/workflows/build.yml)
-
 # Keyboard Layout
 
 ## Base
 
 ```text
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
-|ALT| Q | W | E | R | T |     | Y | U | I | O | P | ` |
+| ` | Q | W | E | R | T |     | Y | U | I | O | P | ` |
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
-|CTL| A | S | D | F | G |     | H | J | K | L | ; | ' |
+| | | A | S | D | F | G |     | H | J | K | L | ; | ' |
 |   |   |   |   |shf|   |     |   |shf|   |   |   |   |
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
 |GUI| Z | X | C | V | B |     | N | M | , | . | / |SHF|
@@ -37,9 +34,9 @@
 
 ```text
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
-|   |   |   |   |   |   |     |   |   |UP |   |   |   |
+|   |   |   |   |   |   |     |   |   |   |   |   |   |
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
-|   |SUP|ALT|CTR|SHF|   |     |   |LFT|DWN|RGT|CAP|   |
+|   |SUP|ALT|CTR|SHF|   |     |LFT|DWN|UP |RGT|CAP|   |
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
 |   |   |   |   |   |   |     |   |HME|PGD|PGU|END|   |
 +---+---+---+---+---+---+     +---+---+---+---+---+---+

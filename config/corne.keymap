@@ -14,6 +14,10 @@
 #define SYM 4
 #define FUN 5
 
+&lt {
+  tapping-term-ms = <250>;
+};
+
 / {
   behaviors {
     hm: positional_hold_tap {
@@ -33,21 +37,20 @@
     base {
       label = "Base";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |ALT| Q | W | E | R | T |     | Y | U | I | O | P | ` |
+      // | ` | Q | W | E | R | T |     | Y | U | I | O | P | ` |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |CTL| A | S | D | F | G |     | H | J | K | L | ; | ' |
-      //                  shf               shf
+      // | | | A | S | D | F | G |     | H | J | K | L | ; | ' |
+      //      ctr alt gui shf               shf gui alt ctr
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |GUI| Z | X | C | V | B |     | N | M | , | . | / |SHF|
-      //      btn                                       btn
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      //             |ESC|TAB|ENT|     |BKS|SPC|DEL| 
-      //              med nav num           sym fun
+      //             |ESC|TAB|ENT|     |SPC|BKS|DEL|
+      //              med nav num       sym     fun
       bindings = <
         &kp GRAVE &kp Q        &kp W     &kp E      &kp R       &kp T      &kp Y &kp U       &kp I      &kp O      &kp P          &kp MINUS
-        &kp LCTRL &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G      &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SEMI &kp SQT
+        &kp PIPE  &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G      &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SEMI &kp SQT
         &kp LGUI  &kp Z        &kp X     &kp C      &kp V       &kp B      &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
-            &lt MED ESC &lt NAV TAB &lt NUM RET      &lt SYM SPACE &kp BSPC &lt FUN DEL
+                                  &lt MED ESC &lt NAV TAB &lt NUM RET      &lt SYM SPACE &kp BSPC &lt FUN DEL
       >;
     };
 
@@ -73,19 +76,19 @@
     nav {
       label = "Nav";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |   |     |   |   |UP |   |   |   |
+      // |   |   |   |   |   |   |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |SUP|ALT|CTR|SHF|   |     |   |LFT|DWN|RGT|CAP|   |
+      // |   |SUP|ALT|CTR|SHF|   |     |LFT|DWN|UP |RGT|CAP|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   |   |   |   |   |   |     |   |HME|PGD|PGU|END|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &trans &trans    &trans   &trans   &trans    &trans      &trans &trans    &kp UP     &trans    &trans   &trans
-        &trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &trans      &trans &kp LEFT &kp DOWN   &kp RIGHT &kp CAPS &trans
-        &trans &trans    &trans   &trans   &trans    &trans      &trans &kp HOME  &kp PG_DN  &kp PG_UP &kp END  &trans
-                                  &trans   &trans    &trans      &trans &trans    &trans
+        &trans &trans    &trans   &trans   &trans    &trans      &trans   &trans    &trans    &trans    &trans   &trans
+        &trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &trans      &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp CAPS &trans
+        &trans &trans    &trans   &trans   &trans    &trans      &trans   &kp HOME  &kp PG_DN &kp PG_UP &kp END  &trans
+                                  &trans   &trans    &trans      &trans   &trans    &trans
       >;
     };
 
