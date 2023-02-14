@@ -39,7 +39,7 @@
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // | ` | Q | W | E | R | T |     | Y | U | I | O | P | ` |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // | | | A | S | D | F | G |     | H | J | K | L | ; | ' |
+      // | \ | A | S | D | F | G |     | H | J | K | L | ; | ' |
       //      ctr alt gui shf               shf gui alt ctr
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |GUI| Z | X | C | V | B |     | N | M | , | . | / |SHF|
@@ -48,7 +48,7 @@
       //              med nav num       sym     fun
       bindings = <
         &kp GRAVE &kp Q        &kp W     &kp E      &kp R       &kp T      &kp Y &kp U       &kp I      &kp O      &kp P          &kp MINUS
-        &kp PIPE  &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G      &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SEMI &kp SQT
+        &kp BSLH  &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G      &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SEMI &kp SQT
         &kp LGUI  &kp Z        &kp X     &kp C      &kp V       &kp B      &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
                                   &lt MED ESC &lt NAV TAB &lt NUM RET      &lt SYM SPACE &kp BSPC &lt FUN DEL
       >;
