@@ -25,7 +25,7 @@
     base {
       label = "Base";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |ALT| Q | W | E | R | T |     | Y | U | I | O | P | - |
+      // |ALT| Q | W | E | R | T |     | Y | U | I | O | P | ` |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |CTL| A | S | D | F | G |     | H | J | K | L | ; | ' |
       //                  shf               shf
@@ -33,10 +33,10 @@
       // |GUI| Z | X | C | V | B |     | N | M | , | . | / |SHF|
       //      btn                                       btn
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      //             |ESC|TAB|ENT|     |SPC|BKS|DEL| 
-      //              med nav num       sym     fun
+      //             |ESC|TAB|ENT|     |BKS|SPC|DEL| 
+      //              med nav num           sym fun
       bindings = <
-        &kp LALT  &kp Q &kp W &kp E &kp R &kp T      &kp Y        &kp U       &kp I     &kp O   &kp P    &kp MINUS
+        &kp LALT  &kp Q &kp W &kp E &kp R &kp T      &kp Y        &kp U       &kp I     &kp O   &kp P    &kp GRAVE
         &kp LCTRL &kp A &kp S &kp D &kp F &kp G      &kp H        &mt RSHFT J &kp K     &kp L   &kp SEMI &kp SQT
         &kp LGUI  &kp Z &kp X &kp C &kp V &kp B      &kp N        &kp M       &kp COMMA &kp DOT &kp FSLH &kp RSHFT
             &lt MED ESC &lt NUM RET &lt NAV TAB      &kp BSPC &lt SYM SPACE   &lt FUN DEL
@@ -64,15 +64,15 @@
 
     nav {
       label = "Nav";
-      // +---+---+---+---+---+---+     +----+---+---+---+----+---+
-      // |   |   |   |   |   |   |     |REDO|PST|CPY|CUT|UNDO|   |
-      // +---+---+---+---+---+---+     +----+---+---+---+----+---+
-      // |   |SUP|ALT|CTR|SHF|   |     |LEFT|DWN|UP |RGT|CAPS|   |
-      // +---+---+---+---+---+---+     +----+---+---+---+----+---+
-      // |   |   |   |   |   |   |     |INS |HME|PGD|PGU|END |   |
-      // +---+---+---+---+---+---+     +----+---+---+---+----+---+
-      //             |   |   |   |     |    |   |   |
-      //             +---+---+---+     +----+---+---+
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |   |   |   |   |   |     |   |   |UP |   |   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |SUP|ALT|CTR|SHF|   |     |   |RGT|DWN|RGT|CAP|   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |   |   |   |   |   |     |   |HME|PGD|PGU|END|   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      //             |   |   |   |     |   |   |   |
+      //             +---+---+---+     +---+---+---+
       bindings = <
         &trans &trans    &trans   &trans   &trans    &trans      &trans &trans    &kp UP     &trans    &trans   &trans
         &trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &trans      &trans &kp RIGHT &kp DOWN   &kp RIGHT &kp CAPS &trans
