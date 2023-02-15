@@ -76,18 +76,18 @@
     nav {
       label = "Nav";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |   |     |   |   |   |   |   |   |
+      // |   |   |   |   |   |   |     |CAP|   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |SUP|ALT|CTR|SHF|   |     |LFT|DWN|UP |RGT|CAP|   |
+      // |   |SUP|ALT|CTR|SHF|   |     |LFT|DWN|UP |RGT|   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   |   |   |   |   |   |     |HME|PGD|PGU|END|   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &none     &none    &none    &none     &none       &none    &none     &none     &none     &none    &none
-        &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none       &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp CAPS &none
-        &none &none     &none    &none    &none     &none       &kp HOME &kp PG_DN &kp PG_UP &kp END   &none    &none
+        &none &none     &none    &none    &none     &none       &kp CAPS &none     &none     &none     &none &none
+        &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none       &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
+        &none &none     &none    &none    &none     &none       &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
                                  &trans   &trans    &trans      &trans   &trans    &trans
       >;
     };
