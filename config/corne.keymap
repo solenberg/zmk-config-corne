@@ -114,19 +114,19 @@
     sym {
       label = "Sym";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | { | & | * | ( | ) |     |   |   |   |   |   |   |
+      // |   | { | & | * | ( | } |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   | : | $ | % | ^ | + |     |   |SHF|CTR|ALT|SUP|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   | ~ | ! | @ | # | | |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      //             |   |   |   |     |   |   |   |
+      //             | _ | > | ) |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &kp RBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp RPAR      &none  &none     &none    &none    &none     &none
+        &none &kp LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp RBRC      &none  &none     &none    &none    &none     &none
         &none &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS      &none  &kp RSHFT &kp RGUI &kp RALT &kp RCTRL &none
         &none &kp TILDE &kp EXCL   &kp AT      &kp POUND &kp PIPE      &none  &none     &none    &none    &none     &none
-                                   &trans      &trans    &trans        &trans &trans    &trans 
+                                   &kp UNDER   &kp GT    &kp RPAR        &trans &trans    &trans 
       >;
     };
 
