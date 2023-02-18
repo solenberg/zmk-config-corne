@@ -19,7 +19,7 @@
 };
 
 &caps_word {
-  continue-list = <UNDERSCORE MINUS>;
+  continue-list = <UNDERS MINUS BSPC>;
 };
 
 / {
@@ -48,7 +48,7 @@
     compatible = "zmk,keymap";
 
     base {
-      label = "Osx";
+      label = "Base";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   | Q | W | E | R | T |     | Y | U | I | O | P |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
