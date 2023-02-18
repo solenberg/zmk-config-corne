@@ -20,7 +20,7 @@
 
 &caps_word {
   continue-list = <UNDERSCORE MINUS>;
-  mods = <(MOD_LSHFT | MOD_RSHFT)>;
+  mods = <(LSHFT | RSHFT)>;
 };
 
 / {
