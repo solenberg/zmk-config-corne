@@ -20,7 +20,6 @@
 
 &caps_word {
   continue-list = <UNDERSCORE MINUS>;
-  mods = <(LSHFT | RSHFT)>;
 };
 
 / {
@@ -90,10 +89,10 @@
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &none     &none    &none    &none     &kp CAPS       &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
-        &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none          &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
-        &none &none     &none    &none    &none     &none          &none    &none     &none     &none     &none &none
-                                 &trans   &trans    &trans         &trans   &trans    &trans
+        &none &none     &none    &none    &none     &caps_word       &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
+        &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none            &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
+        &none &none     &none    &none    &none     &none            &none    &none     &none     &none     &none &none
+                                 &trans   &trans    &trans           &trans   &trans    &trans
       >;
     };
 
