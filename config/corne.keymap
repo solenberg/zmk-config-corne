@@ -18,9 +18,15 @@
   tapping-term-ms = <250>;
 };
 
+&caps_word {
+  continue-list = <UNDERSCORE MINUS>;
+  // mods = <(LSHFT | RSHFT)>;
+  mods = <(MOD_LSHFT & MOD_RSHFT)>;
+};
+
 / {
   behaviors {
-    hm: positional_hold_tap {
+    hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS";
       #binding-cells = <2>;
@@ -35,22 +41,22 @@
     compatible = "zmk,keymap";
 
     base {
-      label = "Base";
+      label = "Osx";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // | ` | Q | W | E | R | T |     | Y | U | I | O | P | - |
+      // |   | Q | W | E | R | T |     | Y | U | I | O | P |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // | \ | A | S | D | F | G |     | H | J | K | L | ; | ' |
+      // |   | A | S | D | F | G |     | H | J | K | L | ' |   |
       //      ctr alt gui shf               shf gui alt ctr
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |GUI| Z | X | C | V | B |     | N | M | , | . | / |SHF|
+      // |   | Z | X | C | V | B |     | N | M | , | . | / |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |ESC|TAB|ENT|     |SPC|BKS|DEL|
       //              med nav num       sym     fun
       bindings = <
-        &kp GRAVE &kp Q        &kp W     &kp E      &kp R       &kp T      &kp Y &kp U       &kp I      &kp O      &kp P          &kp MINUS
-        &kp BSLH  &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G      &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SEMI &kp SQT
-        &kp LGUI  &kp Z        &kp X     &kp C      &kp V       &kp B      &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
-                                  &lt MED ESC &lt NAV TAB &lt NUM RET      &lt SYM SPACE &kp BSPC &lt FUN DEL
+        &none &kp Q        &kp W     &kp E      &kp R       &kp T      &kp Y &kp U       &kp I      &kp O      &kp P         &none
+        &none &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G      &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SQT &none
+        &none &kp Z        &kp X     &kp C      &kp V       &kp B      &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH      &none
+                              &lt MED ESC &lt NAV TAB &lt NUM RET      &lt SYM SPACE &kp BSPC &lt FUN DEL
       >;
     };
 
@@ -66,28 +72,28 @@
       //             |   |   |   |     | 0 | . | - |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none  &none     &none    &none    &none     &none       &kp LBKT  &kp N7  &kp N8 &kp N9 &kp RBKT  &none
-        &trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none       &kp SQT   &kp N4  &kp N5 &kp N6 &kp EQUAL &none
-        &none  &none     &none    &none    &none     &none       &kp GRAVE &kp N1  &kp N2 &kp N3 &kp BSLH  &none
-                                  &trans   &trans    &trans      &kp N0    &kp DOT &kp MINUS
+        &none &none     &none    &none    &none     &none       &kp LBKT  &kp N7  &kp N8 &kp N9 &kp RBKT  &none
+        &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none       &kp SQT   &kp N4  &kp N5 &kp N6 &kp EQUAL &none
+        &none &none     &none    &none    &none     &none       &kp GRAVE &kp N1  &kp N2 &kp N3 &kp BSLH  &none
+                                 &trans   &trans    &trans      &kp N0    &kp DOT &kp MINUS
       >;
     };
 
     nav {
       label = "Nav";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |CAP|     |   |   |   |   |   |   |
+      // |   |   |   |   |   |CAP|     |HME|PGD|PGU|END|   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   |SUP|ALT|CTR|SHF|   |     |LFT|DWN|UP |RGT|   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |   |     |HME|PGD|PGU|END|   |   |
+      // |   |   |   |   |   |   |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &none     &none    &none    &none     &kp CAPS       &trans   &none     &none     &none     &none &none
+        &none &none     &none    &none    &none     &kp CAPS       &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
         &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none          &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
-        &none &none     &none    &none    &none     &none          &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
+        &none &none     &none    &none    &none     &none          &none    &none     &none     &none     &none &none
                                  &trans   &trans    &trans         &trans   &trans    &trans
       >;
     };
@@ -114,38 +120,38 @@
     sym {
       label = "Sym";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | { | & | * | ( | } |     |   |   |   |   |   |   |
+      // |   | } | ( | * | & | { |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | : | $ | % | ^ | + |     |   |SHF|CTR|ALT|SUP|   |
+      // |   | + | ^ | % | $ | : |     |   |SHF|CTR|ALT|SUP|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | ~ | ! | @ | # | | |     |   |   |   |   |   |   |
+      // |   | | | # | @ | ! | ~ |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             | _ | > | ) |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &kp LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp RBRC      &none  &none     &none    &none    &none     &none
-        &none &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS      &none  &kp RSHFT &kp RGUI &kp RALT &kp RCTRL &none
-        &none &kp TILDE &kp EXCL   &kp AT      &kp POUND &kp PIPE      &none  &none     &none    &none    &none     &none
-                                   &kp UNDER   &kp GT    &kp RPAR        &trans &trans    &trans 
+        &none &kp RBRC &kp LPAR  &kp ASTRK   &kp AMPS   &kp LBRC       &none  &none     &none    &none    &none     &none
+        &none &kp PLUS &kp CARET &kp PERCENT &kp DOLLAR &kp COLON      &none  &kp RSHFT &kp RGUI &kp RALT &kp RCTRL &none
+        &none &kp PIPE &kp POUND &kp AT      &kp EXCL   &kp TILDE      &none  &none     &none    &none    &none     &none
+                                 &kp UNDER   &kp GT     &kp RPAR       &trans &trans    &trans 
       >;
     };
 
     fun {
       label = "Func";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |F12|F7 |F8 |F9 |   |     |   |   |   |   |   |   |
+      // |   |   |F7 |F8 |F9 |F12|     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |F11|F4 |F5 |F6 |   |     |   |SHF|GUI|ALT|CTR|   |
+      // |   |   |F4 |F5 |F6 |F11|     |   |SHF|GUI|ALT|CTR|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |F10|F1 |F2 |F3 |   |     |   |   |   |   |   |   |
+      // |   |   |F1 |F2 |F3 |F10|     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &kp F12 &kp F7 &kp F8 &kp F9 &none       &none  &trans    &none     &none    &none     &none
-        &none &kp F11 &kp F4 &kp F5 &kp F6 &none       &none  &kp RSHFT &kp RGUI  &kp RALT &kp RCTRL &none
-        &none &kp F10 &kp F1 &kp F2 &kp F3 &none       &none  &trans    &none     &none    &none     &none
-                             &trans &trans &trans      &trans &trans    &trans
+        &none &none &kp F7 &kp F8 &kp F9 &kp F12      &none  &trans    &none     &none    &none     &none
+        &none &none &kp F4 &kp F5 &kp F6 &kp F11      &none  &kp RSHFT &kp RGUI  &kp RALT &kp RCTRL &none
+        &none &none &kp F1 &kp F2 &kp F3 &kp F10      &none  &trans    &none     &none    &none     &none
+                           &trans &trans &trans       &trans &trans    &trans
       >;
     };
 
