@@ -89,19 +89,19 @@
     nav {
       label = "Nav";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |CAP|     |HME|PGD|PGU|END|   |   |
+      // |   |   |   |   |   |   |     |   |HME|PGD|PGU|END|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |SUP|ALT|CTR|SHF|   |     |LFT|DWN|UP |RGT|   |   |
+      // |   |SUP|ALT|CTR|SHF|   |     |   |LFT|DWN|UP |RGT|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |   |     |   |   |   |   |   |   |
+      // |   |   |   |   |   |   |     |   |HME|PGD|PGU|END|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &none     &none    &none    &none     &kp CAPS       &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
-        &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none          &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
-        &none &none     &none    &none    &none     &none          &none    &none     &none     &none     &none &none
-                                 &trans   &trans    &trans         &trans   &trans    &trans
+        &none &none     &none    &none    &none     &none       &none  &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
+        &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none       &none  &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
+        &none &none     &none    &none    &none     &none       &none  &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
+                                 &trans   &trans    &trans      &trans &trans   &trans
       >;
     };
 
@@ -127,19 +127,19 @@
     sym {
       label = "Sym";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | } | ( | * | & | { |     |   |   |   |   |   |   |
+      // |   | { | & | * | ( | } |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | + | ^ | % | $ | : |     |   |SHF|CTR|ALT|SUP|   |
+      // |   | : | $ | % | ^ | + |     |   |SHF|CTR|ALT|SUP|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | | | # | @ | ! | ~ |     |   |   |   |   |   |   |
+      // |   | ~ | ! | @ | # | | |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             | _ | > | ) |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &kp RBRC &kp LPAR  &kp ASTRK   &kp AMPS   &kp LBRC       &none  &none     &none    &none    &none     &none
-        &none &kp PLUS &kp CARET &kp PERCENT &kp DOLLAR &kp COLON      &none  &kp RSHFT &kp RGUI &kp RALT &kp RCTRL &none
-        &none &kp PIPE &kp POUND &kp AT      &kp EXCL   &kp TILDE      &none  &none     &none    &none    &none     &none
-                                 &kp UNDER   &kp GT     &kp RPAR       &trans &trans    &trans 
+        &none &kp LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp LBRC       &none  &none     &none    &none    &none     &none
+        &none &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp COLON      &none  &kp RSHFT &kp RGUI &kp RALT &kp RCTRL &none
+        &none &kp TILDE &kp EXCL   &kp AT      &kp HASH  &kp TILDE      &none  &none     &none    &none    &none     &none
+                                   &kp UNDER   &kp GT    &kp RPAR       &trans &trans    &trans 
       >;
     };
 
@@ -155,9 +155,9 @@
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &none &kp F7 &kp F8 &kp F9 &kp F12      &none  &trans    &none     &none    &none     &none
-        &none &none &kp F4 &kp F5 &kp F6 &kp F11      &none  &kp RSHFT &kp RGUI  &kp RALT &kp RCTRL &none
-        &none &none &kp F1 &kp F2 &kp F3 &kp F10      &none  &trans    &none     &none    &none     &none
+        &none &none &kp F7 &kp F8 &kp F9 &kp F12      &none  &trans    &none    &none    &none     &none
+        &none &none &kp F4 &kp F5 &kp F6 &kp F11      &none  &kp RSHFT &kp RGUI &kp RALT &kp RCTRL &none
+        &none &none &kp F1 &kp F2 &kp F3 &kp F10      &none  &trans    &none    &none    &none     &none
                            &trans &trans &trans       &trans &trans    &trans
       >;
     };
