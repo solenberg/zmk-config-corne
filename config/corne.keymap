@@ -18,9 +18,13 @@
   tapping-term-ms = <250>;
 };
 
+&caps_word {
+  continue-list = <UNDER MINUS BSPC>;
+};
+
 / {
   behaviors {
-    hm: positional_hold_tap {
+    hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
       label = "HOMEROW_MODS";
       #binding-cells = <2>;
@@ -31,26 +35,35 @@
     };
   };
 
+  combos {
+    compatible = "zmk,combos";
+    combo_capswrd {
+      timeout-ms = <50>;
+      key-positions = <16 19>;
+      bindings = <&caps_word 0>;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
     base {
       label = "Base";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // | ` | Q | W | E | R | T |     | Y | U | I | O | P | - |
+      // |   | Q | W | E | R | T |     | Y | U | I | O | P |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // | \ | A | S | D | F | G |     | H | J | K | L | ; | ' |
+      // |   | A | S | D | F | G |     | H | J | K | L | ' |   |
       //      ctr alt gui shf               shf gui alt ctr
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |GUI| Z | X | C | V | B |     | N | M | , | . | / |SHF|
+      // |   | Z | X | C | V | B |     | N | M | , | . | / |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |ESC|TAB|ENT|     |SPC|BKS|DEL|
       //              med nav num       sym     fun
       bindings = <
-        &kp GRAVE &kp Q        &kp W     &kp E      &kp R       &kp T      &kp Y &kp U       &kp I      &kp O      &kp P          &kp MINUS
-        &kp BSLH  &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G      &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SEMI &kp SQT
-        &kp LGUI  &kp Z        &kp X     &kp C      &kp V       &kp B      &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH       &kp RSHFT
-                                  &lt MED ESC &lt NAV TAB &lt NUM RET      &lt SYM SPACE &kp BSPC &lt FUN DEL
+        &none &kp Q       &kp W      &kp E       &kp R       &kp T            &kp Y         &kp U       &kp I       &kp O      &kp P         &none
+        &none &hm LCTRL A &hm LALT S &hm LGUI D  &hm LSHFT F &kp G            &kp H         &hm RSHFT J &hm RGUI K  &hm RALT L &hm RCTRL SQT &none
+        &none &kp Z       &kp X      &kp C       &kp V       &kp B            &kp N         &kp M       &kp COMMA   &kp DOT    &kp FSLH      &none
+                                     &lt MED ESC &lt NAV TAB &lt NUM RET      &lt SYM SPACE &kp BSPC    &lt FUN DEL
       >;
     };
 
@@ -66,48 +79,48 @@
       //             |   |   |   |     | 0 | . | - |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none  &none     &none    &none    &none     &none       &kp LBKT  &kp N7  &kp N8 &kp N9 &kp RBKT  &none
-        &trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none       &kp SQT   &kp N4  &kp N5 &kp N6 &kp EQUAL &none
-        &none  &none     &none    &none    &none     &none       &kp GRAVE &kp N1  &kp N2 &kp N3 &kp BSLH  &none
-                                  &trans   &trans    &trans      &kp N0    &kp DOT &kp MINUS
+        &none &none     &none    &none    &none     &none       &kp LBKT  &kp N7  &kp N8 &kp N9 &kp RBKT  &none
+        &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none       &kp SEMI  &kp N4  &kp N5 &kp N6 &kp EQUAL &none
+        &none &none     &none    &none    &none     &none       &kp GRAVE &kp N1  &kp N2 &kp N3 &kp BSLH  &none
+                                 &trans   &trans    &trans      &kp N0    &kp DOT &kp MINUS
       >;
     };
 
     nav {
       label = "Nav";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |CAP|     |   |   |   |   |   |   |
+      // |   |   |   |   |   |   |     |   |HME|PGD|PGU|END|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |SUP|ALT|CTR|SHF|   |     |LFT|DWN|UP |RGT|   |   |
+      // |   |SUP|ALT|CTR|SHF|   |     |   |LFT|DWN|UP |RGT|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |   |     |HME|PGD|PGU|END|   |   |
+      // |   |   |   |   |   |   |     |   |HME|PGD|PGU|END|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &none     &none    &none    &none     &kp CAPS       &trans   &none     &none     &none     &none &none
-        &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none          &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
-        &none &none     &none    &none    &none     &none          &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
-                                 &trans   &trans    &trans         &trans   &trans    &trans
+        &none &none     &none    &none    &none     &none       &none  &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
+        &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none       &none  &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
+        &none &none     &none    &none    &none     &none       &none  &kp HOME &kp PG_DN &kp PG_UP &kp END   &none
+                                 &trans   &trans    &trans      &trans &trans   &trans
       >;
     };
 
     med {
       label = "Media";
-      // +---+---+---+---+---+----+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |BTCL|     |BT0|BT1|BT2|BT3|BT4|   |
-      // +---+---+---+---+---+----+     +---+---+---+---+---+---+
-      // |   |CTR|ALT|GUI|SHF|    |     |   |PRV|PLY|NXT|   |   |
-      // +---+---+---+---+---+----+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |    |     |   |VO-|VMT|VO+|   |   |
-      // +---+---+---+---+---+----+     +---+---+---+---+---+---+
-      //             |   |   |    |     |   |   |   |
-      //             +---+---+----+     +---+---+---+
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |BCL|   |   |   |   |     |   |BT0|BT1|BT2|   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |CTR|ALT|GUI|SHF|   |     |   |PRV|PLY|NXT|   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |   |   |   |   |   |     |   |VO-|VMT|VO+|   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      //             |   |   |   |     |   |   |   |
+      //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &none     &none    &none    &none     &bt BT_CLR      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
-        &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none           &none        &kp C_PREV   &kp C_PP     &kp C_NEXT   &none        &none
-        &none &none     &none    &none    &none     &none           &none        &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none        &none
-                                 &trans   &trans    &trans          &trans       &trans       &trans
+        &none &bt BT_CLR &none    &none    &none     &none       &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &none
+        &none &kp LCTRL  &kp LALT &kp LGUI &kp LSHFT &none       &none  &kp C_PREV   &kp C_PP     &kp C_NEXT   &trans &none
+        &none &none      &none    &none    &none     &none       &none  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &trans &none
+                                  &trans   &trans    &trans      &trans &trans       &trans
       >;
     };
 
@@ -123,29 +136,29 @@
       //             | _ | > | ) |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &kp LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp RBRC      &none  &none     &none    &none    &none     &none
-        &none &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS      &none  &kp RSHFT &kp RGUI &kp RALT &kp RCTRL &none
-        &none &kp TILDE &kp EXCL   &kp AT      &kp POUND &kp PIPE      &none  &none     &none    &none    &none     &none
-                                   &kp UNDER   &kp GT    &kp RPAR        &trans &trans    &trans 
+        &none &kp LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp LBRC       &none  &none     &none    &none    &none     &none
+        &none &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp COLON      &none  &kp RSHFT &kp RGUI &kp RALT &kp RCTRL &none
+        &none &kp TILDE &kp EXCL   &kp AT      &kp HASH  &kp TILDE      &none  &none     &none    &none    &none     &none
+                                   &kp UNDER   &kp GT    &kp RPAR       &trans &trans    &trans 
       >;
     };
 
     fun {
       label = "Func";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |F12|F7 |F8 |F9 |   |     |   |   |   |   |   |   |
+      // |   |   |F7 |F8 |F9 |F12|     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |F11|F4 |F5 |F6 |   |     |   |SHF|GUI|ALT|CTR|   |
+      // |   |   |F4 |F5 |F6 |F11|     |   |SHF|GUI|ALT|CTR|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |F10|F1 |F2 |F3 |   |     |   |   |   |   |   |   |
+      // |   |   |F1 |F2 |F3 |F10|     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &kp F12 &kp F7 &kp F8 &kp F9 &none       &none  &trans    &none     &none    &none     &none
-        &none &kp F11 &kp F4 &kp F5 &kp F6 &none       &none  &kp RSHFT &kp RGUI  &kp RALT &kp RCTRL &none
-        &none &kp F10 &kp F1 &kp F2 &kp F3 &none       &none  &trans    &none     &none    &none     &none
-                             &trans &trans &trans      &trans &trans    &trans
+        &none &none &kp F7 &kp F8 &kp F9 &kp F12      &none  &trans    &none    &none    &none     &none
+        &none &none &kp F4 &kp F5 &kp F6 &kp F11      &none  &kp RSHFT &kp RGUI &kp RALT &kp RCTRL &none
+        &none &none &kp F1 &kp F2 &kp F3 &kp F10      &none  &trans    &none    &none    &none     &none
+                           &trans &trans &trans       &trans &trans    &trans
       >;
     };
 
