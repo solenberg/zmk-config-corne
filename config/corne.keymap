@@ -117,7 +117,7 @@
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &bt BT_CLR &none    &none    &none     &none       &NONE  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &none
+        &none &bt BT_CLR &none    &none    &none     &none       &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &none
         &none &kp LCTRL  &kp LALT &kp LGUI &kp LSHFT &none       &none  &kp C_PREV   &kp C_PP     &kp C_NEXT   &trans &none
         &none &none      &none    &none    &none     &none       &none  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &trans &none
                                   &trans   &trans    &trans      &trans &trans       &trans
