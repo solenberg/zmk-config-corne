@@ -39,7 +39,7 @@
     compatible = "zmk,combos";
     combo_capswrd {
       timeout-ms = <50>;
-      key-positions = <16 19>;
+      key-positions = <38 39>;
       bindings = <&caps_word 0>;
     };
   };
@@ -60,10 +60,10 @@
       //             |ESC|TAB|ENT|     |SPC|BKS|DEL|
       //              med nav num       sym     fun
       bindings = <
-        &none &kp Q        &kp W     &kp E      &kp R       &kp T      &kp Y &kp U       &kp I      &kp O      &kp P         &none
-        &none &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G      &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SQT &none
-        &none &kp Z        &kp X     &kp C      &kp V       &kp B      &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH      &none
-                              &lt MED ESC &lt NAV TAB &lt NUM RET      &lt SYM SPACE &kp BSPC &lt FUN DEL
+        &none &kp Q       &kp W      &kp E       &kp R       &kp T            &kp Y         &kp U       &kp I       &kp O      &kp P         &none
+        &none &hm LCTRL A &hm LALT S &hm LGUI D  &hm LSHFT F &kp G            &kp H         &hm RSHFT J &hm RGUI K  &hm RALT L &hm RCTRL SQT &none
+        &none &kp Z       &kp X      &kp C       &kp V       &kp B            &kp N         &kp M       &kp COMMA   &kp DOT    &kp FSLH      &none
+                                     &lt MED ESC &lt NAV TAB &lt NUM RET      &lt SYM SPACE &kp BSPC    &lt FUN DEL
       >;
     };
 
@@ -107,20 +107,20 @@
 
     med {
       label = "Media";
-      // +---+---+---+---+---+----+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |BTCL|     |BT0|BT1|BT2|BT3|BT4|   |
-      // +---+---+---+---+---+----+     +---+---+---+---+---+---+
-      // |   |CTR|ALT|GUI|SHF|    |     |   |PRV|PLY|NXT|   |   |
-      // +---+---+---+---+---+----+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |    |     |   |VO-|VMT|VO+|   |   |
-      // +---+---+---+---+---+----+     +---+---+---+---+---+---+
-      //             |   |   |    |     |   |   |   |
-      //             +---+---+----+     +---+---+---+
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |BCL|   |   |   |   |     |   |BT0|BT1|BT2|   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |CTR|ALT|GUI|SHF|   |     |   |PRV|PLY|NXT|   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |   |   |   |   |   |     |   |VO-|VMT|VO+|   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      //             |   |   |   |     |   |   |   |
+      //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &none     &none    &none    &none     &bt BT_CLR      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
-        &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none           &none        &kp C_PREV   &kp C_PP     &kp C_NEXT   &none        &none
-        &none &none     &none    &none    &none     &none           &none        &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none        &none
-                                 &trans   &trans    &trans          &trans       &trans       &trans
+        &none &bt BT_CLR &none    &none    &none     &none       &NONE  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &none
+        &none &kp LCTRL  &kp LALT &kp LGUI &kp LSHFT &none       &none  &kp C_PREV   &kp C_PP     &kp C_NEXT   &trans &none
+        &none &none      &none    &none    &none     &none       &none  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &trans &none
+                                  &trans   &trans    &trans      &trans &trans       &trans
       >;
     };
 
