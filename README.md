@@ -36,11 +36,11 @@ Highly influenced by the [Miryoku](https://github.com/manna-harbour/miryoku/tree
 
 ```raw
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
-|   |   |   |   |   |   |     |   |HME|PGD|PGU|END|   |
+|   |   |   |   |   |   |     |HME|PGD|PGU|END|   |   |
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
-|   |CTR|ALT|GUI|SHF|   |     |   |LFT|DWN|UP |RGT|   |
+|   |CTR|ALT|GUI|SHF|   |     |LFT|DWN|UP |RGT|   |   |
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
-|   |   |   |   |   |   |     |   |HME|PGD|PGU|END|   |
+|   |   |   |   |   |   |     |HME|PGD|PGU|END|   |   |
 +---+---+---+---+---+---+     +---+---+---+---+---+---+
             |   |   |   |     |   |   |   |
             +---+---+---+     +---+---+---+
