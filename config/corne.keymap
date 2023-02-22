@@ -41,6 +41,27 @@
       timeout-ms = <50>;
       key-positions = <16 19>; // tap F and J to enable
       bindings = <&caps_word 0>;
+      layers = <0>;
+    };
+
+    combo_cut {
+      timeout-ms = <50>;
+      key-positions = <26 27>; // tap X and C to cut text
+      bindings = <&kp LGUI &kp X>;
+      layers = <0>;
+    };
+
+    combo_copy {
+      timeout-ms = <50>;
+      key-positions = <27 28>; // tap C and V to copy text
+      bindings = <&kp LGUI &kp C>;
+      layers = <0>;
+    };
+    combo_paste {
+      timeout-ms = <50>;
+      key-positions = <28 29>; // tap V and B to cut text
+      bindings = <&kp LGUI &kp V>;
+      layers = <0>;
     };
   };
 
@@ -127,18 +148,18 @@
     sym {
       label = "Sym";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | { | & | * | ( | } |     |   |   |   |   |   |   |
+      // |   | { | & | * | ( | } |     |   | { | [ | ( | < |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   | : | $ | % | ^ | + |     |   |SHF|CTR|ALT|SUP|   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | ~ | ! | @ | # | | |     |   |   |   |   |   |   |
+      // |   | ~ | ! | @ | # | | |     |   | } | ] | ) | > |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             | _ | > | ) |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &kp LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp RBRC      &none  &none     &none    &none    &none     &none
+        &none &kp LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp RBRC      &none  &kp LBRC  &kp LBKT &kp LPAR &kp GT    &none
         &none &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS      &none  &kp LSHFT &kp LGUI &kp LALT &kp LCTRL &none
-        &none &kp TILDE &kp EXCL   &kp AT      &kp HASH  &kp PIPE      &none  &none     &none    &none    &none     &none
+        &none &kp TILDE &kp EXCL   &kp AT      &kp HASH  &kp PIPE      &none  &kp RBRC  &kp RBKT &kp RPAR &kp LT    &none
                                    &kp UNDER   &kp GT    &kp RPAR      &trans &trans    &trans 
       >;
     };
