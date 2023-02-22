@@ -13,6 +13,7 @@
 #define MED 3
 #define SYM 4
 #define FUN 5
+#define ADJ 6
 
 &lt {
   tapping-term-ms = <250>;
@@ -70,6 +71,14 @@
       key-positions = <14 15>; // tap S and D to save file
       bindings = <&kp LG(S)>;
       layers = <0>;
+    };
+  };
+
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+      if-layers = <NUM SYM>;
+      then-layer = <ADJ>;
     };
   };
 
@@ -137,7 +146,7 @@
     med {
       label = "Media";
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |BCL|   |   |   |   |     |   |BT0|BT1|BT2|   |   |
+      // |   |   |   |   |   |   |     |   |   |   |   |   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   |   |CTR|ALT|GUI|SHF|     |   |PRV|PLY|NXT|   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
@@ -146,10 +155,10 @@
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &none &none     &none    &none    &none          &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &none
-        &none &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT      &none  &kp C_PREV   &kp C_PP     &kp C_NEXT   &trans &none
-        &none &none &none     &none    &none    &none          &none  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &trans &none
-                              &trans   &trans   &trans         &trans &trans       &trans
+        &none &bt BT_CLR &none     &none    &none    &none          &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none &none
+        &none &none      &kp LCTRL &kp LALT &kp LGUI &kp LSHFT      &none  &kp C_PREV   &kp C_PP     &kp C_NEXT   &none &none
+        &none &none      &none     &none    &none    &none          &none  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none &none
+                                   &trans   &trans   &trans         &trans &trans       &trans
       >;
     };
 
@@ -191,5 +200,23 @@
       >;
     };
 
+    adj {
+      label = "Adjust";
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |   |   |   |   |BCL|     |   |BT0|BT1|BT2|   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |   |   |   |   |   |     |   |   |   |   |   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   |   |   |   |   |   |     |   |   |   |   |   |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      //             |   |   |   |     |   |   |   |
+      //             +---+---+---+     +---+---+---+
+      bindings = <
+        &none &none &none &none  &none  &bt BT_CLR      &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none &none
+        &none &none &none &none  &none  &none           &none  &none        &none        &none        &none &none
+        &none &none &none &none  &none  &none           &none  &none        &none        &none        &none &none
+                          &trans &trans &trans          &trans &trans       &trans
+      >;
+    };
   };
 };
