@@ -165,9 +165,9 @@
       //             | _ | > | ) |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &kp LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp RBRC      &kp LBRC  &kp LBKT &kp LPAR &kp GT    &none &none
+        &none &kp LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp RBRC      &kp LBRC  &kp LBKT &kp LPAR &kp LT    &none &none
         &none &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS      &kp LSHFT &kp LGUI &kp LALT &kp LCTRL &none &none
-        &none &kp TILDE &kp EXCL   &kp AT      &kp HASH  &kp PIPE      &kp RBRC  &kp RBKT &kp RPAR &kp LT    &none &none
+        &none &kp TILDE &kp EXCL   &kp AT      &kp HASH  &kp PIPE      &kp RBRC  &kp RBKT &kp RPAR &kp GT    &none &none
                                    &kp UNDER   &kp GT    &kp RPAR      &trans    &trans   &trans 
       >;
     };
