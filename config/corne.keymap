@@ -71,6 +71,14 @@
       bindings = <&kp LG(S)>;
       layers = <0>;
     };
+
+    combo_lockscreen {
+      timeout-ms = <50>;
+      key-positions = <9 10>; // tap O and P to lock screen
+      bindings = <&kp LC(LG(Q))>;
+      layers = <0>;
+    };
+
   };
 
   keymap {
