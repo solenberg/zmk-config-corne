@@ -79,6 +79,13 @@
       layers = <0>;
     };
 
+    combo_reset_window_zoom {
+      timeout-ms = <50>;
+      key-positions = <4 5>; // tap R and T to reset window zoom
+      bindings = <&kp LG(N0)>;
+      layers = <0>;
+    };
+
   };
 
   keymap {
