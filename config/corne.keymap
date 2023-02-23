@@ -123,10 +123,10 @@
       //             |   |   |   |     | 0 | . | - |
       //             +---+---+---+     +---+---+---+
       bindings = <
-        &none &none &none     &none    &none     &none         &kp LBKT  &kp N7  &kp N8 &kp N9 &kp RBKT  &none
-        &none &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT      &kp SEMI  &kp N4  &kp N5 &kp N6 &kp EQUAL &none
-        &none &none &none     &none    &none     &none         &kp GRAVE &kp N1  &kp N2 &kp N3 &kp BSLH  &none
-                              &trans   &trans    &trans        &kp N0    &kp DOT &kp MINUS
+        &none &none &none     &none    &none    &none         &kp LBKT  &kp N7  &kp N8 &kp N9 &kp RBKT  &none
+        &none &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT     &kp SEMI  &kp N4  &kp N5 &kp N6 &kp EQUAL &none
+        &none &none &none     &none    &none    &none         &kp GRAVE &kp N1  &kp N2 &kp N3 &kp BSLH  &none
+                              &trans   &trans   &trans        &kp N0    &kp DOT &kp MINUS
       >;
     };
 
