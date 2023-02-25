@@ -214,24 +214,5 @@
       >;
     };
 
-    cmk {
-      label = "Cm-DH";
-      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | Q | W | F | P | B |     | J | L | U | Y | ' |   |
-      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | A | R | S | T | G |     | M | N | E | I | O |   |
-      //          ctr alt gui shf       shf gui alt ctr
-      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   | Z | X | C | D | V |     | K | H | , | . | / |   |
-      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      //             |ESC|TAB|ENT|     |SPC|BKS|DEL|
-      //              med nav num       sym     fun
-      bindings = <
-        &none &kp Q &kp W       &kp F       &kp P       &kp B             &kp J         &kp L      &kp U       &kp Y       &kp SQT  &none
-        &none &kp A &hm LCTRL R &hm LALT S  &hm LGUI T  &hm LSHIFT G      &hm LSHIFT M  &hm LGUI N &hm LALT E  &hm LCTRL I &kp O    &none
-        &none &kp Z &kp X       &kp C       &kp D       &kp V             &kp K         &kp H      &kp COMMA   &kp DOT     &kp FSLH &none
-                                &lt MED ESC &lt NAV TAB &lt NUM RET       &lt SYM SPACE &kp BSPC   &lt FUN DEL
-      >;
-    };
   };
 };
