@@ -13,6 +13,7 @@
 #define MED 3
 #define SYM 4
 #define FUN 5
+#define CMK 6
 
 &lt {
   tapping-term-ms = <250>;
@@ -21,6 +22,13 @@
 &caps_word {
   continue-list = <UNDER MINUS BSPC>;
 };
+
+// / {
+//   chosen {
+//     zmk,matrix_transform = &default_transform;
+//     //zmk,matrix_transform = &five_column_transform;
+//   };
+// };
 
 / {
   behaviors {
@@ -154,16 +162,16 @@
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       // |   |BCL|   |   |   |   |     |   |BT0|BT1|BT2|   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |   |CTR|ALT|GUI|SHF|     |   |PRV|PLY|NXT|   |   |
+      // |   |BSE|CTR|ALT|GUI|SHF|     |   |PRV|PLY|NXT|   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
-      // |   |   |   |   |   |   |     |   |VO-|VMT|VO+|   |   |
+      // |   |CMK|   |   |   |   |     |   |VO-|VMT|VO+|   |   |
       // +---+---+---+---+---+---+     +---+---+---+---+---+---+
       //             |   |   |   |     |   |   |   |
       //             +---+---+---+     +---+---+---+
       bindings = <
         &none &bt BT_CLR &none     &none    &none    &none          &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none &none
-        &none &none      &kp LCTRL &kp LALT &kp LGUI &kp LSHFT      &none  &kp C_PREV   &kp C_PP     &kp C_NEXT   &none &none
-        &none &none      &none     &none    &none    &none          &none  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none &none
+        &none &to BASE   &kp LCTRL &kp LALT &kp LGUI &kp LSHFT      &none  &kp C_PREV   &kp C_PP     &kp C_NEXT   &none &none
+        &none &to CMK    &none     &none    &none    &none          &none  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none &none
                                    &trans   &trans   &trans         &trans &trans       &trans
       >;
     };
@@ -206,5 +214,24 @@
       >;
     };
 
+    cmk {
+      label = "Cm-DH";
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   | Q | W | F | P | B |     | J | L | U | Y | ' |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   | A | R | S | T | G |     | M | N | E | I | O |   |
+      //          ctr alt gui shf       shf gui alt ctr
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      // |   | Z | X | C | D | V |     | K | H | , | . | / |   |
+      // +---+---+---+---+---+---+     +---+---+---+---+---+---+
+      //             |ESC|TAB|ENT|     |SPC|BKS|DEL|
+      //              med nav num       sym     fun
+      bindings = <
+        &none &kp Q &kp W       &kp F       &kp P       &kp B             &kp J         &kp L      &kp U       &kp Y       &kp SQT  &none
+        &none &kp A &hm LCTRL R &hm LALT S  &hm LGUI T  &hm LSHIFT G      &hm LSHIFT M  &hm LGUI N &hm LALT E  &hm LCTRL I &kp O    &none
+        &none &kp Z &kp X       &kp C       &kp D       &kp V             &kp K         &kp H      &kp COMMA   &kp DOT     &kp FSLH &none
+                                &lt MED ESC &lt NAV TAB &lt NUM RET       &lt SYM SPACE &kp BSPC   &lt FUN DEL
+      >;
+    };
   };
 };
