@@ -170,8 +170,8 @@
       //             +---+---+---+     +---+---+---+
       bindings = <
         &none &bt BT_CLR &none     &none    &none    &none          &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none &none
-        &none &to BASE   &kp LCTRL &kp LALT &kp LGUI &kp LSHFT      &none  &kp C_PREV   &kp C_PP     &kp C_NEXT   &none &none
-        &none &to CMK    &none     &none    &none    &none          &none  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none &none
+        &none &tog BASE  &kp LCTRL &kp LALT &kp LGUI &kp LSHFT      &none  &kp C_PREV   &kp C_PP     &kp C_NEXT   &none &none
+        &none &tog CMK   &none     &none    &none    &none          &none  &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none &none
                                    &trans   &trans   &trans         &trans &trans       &trans
       >;
     };
