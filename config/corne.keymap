@@ -46,42 +46,42 @@
     compatible = "zmk,combos";
     combo_capswrd {
       timeout-ms = <50>;
-      key-positions = <16 19>; // tap F and J to enable
+      key-positions = <13 16>; // tap F and J to enable
       bindings = <&caps_word 0>;
       layers = <0>;
     };
 
     combo_cut {
       timeout-ms = <50>;
-      key-positions = <26 27>; // tap X and C to cut text
+      key-positions = <21 22>; // tap X and C to cut text
       bindings = <&kp LG(X)>;
       layers = <0>;
     };
 
     combo_copy {
       timeout-ms = <50>;
-      key-positions = <27 28>; // tap C and V to copy text
+      key-positions = <22 23>; // tap C and V to copy text
       bindings = <&kp LG(C)>;
       layers = <0>;
     };
 
     combo_paste {
       timeout-ms = <50>;
-      key-positions = <28 29>; // tap V and B to paste text
+      key-positions = <23 24>; // tap V and B to paste text
       bindings = <&kp LG(V)>;
       layers = <0>;
     };
 
     combo_save {
       timeout-ms = <50>;
-      key-positions = <14 15>; // tap S and D to save file
+      key-positions = <11 12>; // tap S and D to save file
       bindings = <&kp LG(S)>;
       layers = <0>;
     };
 
     combo_lockscreen {
       timeout-ms = <50>;
-      key-positions = <9 10>; // tap O and P to lock screen
+      key-positions = <8 9>; // tap O and P to lock screen
       bindings = <&kp LC(LG(Q))>;
       layers = <0>;
     };
