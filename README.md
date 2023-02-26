@@ -9,7 +9,7 @@ Highly influenced by the [Miryoku](https://github.com/manna-harbour/miryoku/tree
 | Q | W | E | R | T |     | Y | U | I | O | P |
 +---+---+---+---+---+     +---+---+---+---+---+
 | A | S | D | F | G |     | H | J | K | L | ' |
-|   |ctr|alt|gui|shf|     |shf|gui|alt|ctr|   |
+|ctr|alt|gui|shf|   |     |   |shf|gui|alt|ctr|
 +---+---+---+---+---+     +---+---+---+---+---+
 | Z | X | C | V | B |     | N | M | , | . | / |
 +---+---+---+---+---+     +---+---+---+---+---+
@@ -24,7 +24,7 @@ Highly influenced by the [Miryoku](https://github.com/manna-harbour/miryoku/tree
 +---+---+---+---+---+     +---+---+---+---+---+
 |   |   |   |   |   |     | [ | 7 | 8 | 9 | ] |
 +---+---+---+---+---+     +---+---+---+---+---+
-|   |CTR|ALT|GUI|SHF|     | ; | 4 | 5 | 6 | = |
+|CTR|ALT|GUI|SHF|   |     | ; | 4 | 5 | 6 | = |
 +---+---+---+---+---+     +---+---+---+---+---+
 |   |   |   |   |   |     | ` | 1 | 2 | 3 | \ |
 +---+---+---+---+---+     +---+---+---+---+---+
@@ -38,7 +38,7 @@ Highly influenced by the [Miryoku](https://github.com/manna-harbour/miryoku/tree
 +---+---+---+---+---+     +---+---+---+---+---+
 |   |   |   |   |   |     |UND|PST|CPY|CUT|RDO|
 +---+---+---+---+---+     +---+---+---+---+---+
-|   |CTR|ALT|CTR|SHF|     |LFT|DWN|UP |RGT|   |
+|CTR|ALT|CTR|SHF|   |     |LFT|DWN|UP |RGT|   |
 +---+---+---+---+---+     +---+---+---+---+---+
 |   |   |   |   |   |     |HME|PGD|PGU|END|   |
 +---+---+---+---+---+     +---+---+---+---+---+
@@ -52,7 +52,7 @@ Highly influenced by the [Miryoku](https://github.com/manna-harbour/miryoku/tree
 +---+---+---+---+---+     +---+---+---+---+---+
 |BCL|   |   |   |   |     |   |BT0|BT1|BT2|   |
 +---+---+---+---+---+     +---+---+---+---+---+
-|   |CTR|ALT|GUI|SHF|     |   |PRV|PLY|NXT|   |
+|CTR|ALT|GUI|SHF|   |     |   |PRV|PLY|NXT|   |
 +---+---+---+---+---+     +---+---+---+---+---+
 |   |   |   |   |   |     |   |VO-|VMT|VO+|   |
 +---+---+---+---+---+     +---+---+---+---+---+
@@ -66,7 +66,7 @@ Highly influenced by the [Miryoku](https://github.com/manna-harbour/miryoku/tree
 +---+---+---+---+---+     +---+---+---+---+---+
 | { | & | * | ( | } |     | { | [ | ( | < |   |
 +---+---+---+---+---+     +---+---+---+---+---+
-| : | $ | % | ^ | + |     |SHF|CTR|ALT|SUP|   |
+| : | $ | % | ^ | + |     |   |SHF|CTR|ALT|SUP|
 +---+---+---+---+---+     +---+---+---+---+---+
 | ~ | ! | @ | # | | |     | } | ] | ) | > |   |
 +---+---+---+---+---+     +---+---+---+---+---+
@@ -80,7 +80,7 @@ Highly influenced by the [Miryoku](https://github.com/manna-harbour/miryoku/tree
 +---+---+---+---+---+     +---+---+---+---+---+
 |   |F7 |F8 |F9 |F12|     |   |   |   |   |   |
 +---+---+---+---+---+     +---+---+---+---+---+
-|   |F4 |F5 |F6 |F11|     |SHF|GUI|ALT|CTR|   |
+|   |F4 |F5 |F6 |F11|     |   |SHF|GUI|ALT|CTR|
 +---+---+---+---+---+     +---+---+---+---+---+
 |   |F1 |F2 |F3 |F10|     |   |   |   |   |   |
 +---+---+---+---+---+     +---+---+---+---+---+
