@@ -37,7 +37,7 @@
       #binding-cells = <2>;
       tapping-term-ms = <200>;
       quick-tap-ms = <0>;
-      // global-quick-tap;
+      global-quick-tap;
       flavor = "balanced";
       bindings = <&kp>, <&kp>;
     };
