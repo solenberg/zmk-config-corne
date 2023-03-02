@@ -172,18 +172,18 @@
     sym {
       label = "Sym";
       // +---+---+---+---+---+     +---+---+---+---+---+
-      // | { | & | * | ( | } |     | { | [ | ( | < |   |
+      // | { | & | * | ( | } |     | [ | { | ( | < |   |
       // +---+---+---+---+---+     +---+---+---+---+---+
       // | : | $ | % | ^ | + |     |   |SHF|CTR|ALT|SUP|
       // +---+---+---+---+---+     +---+---+---+---+---+
-      // | ~ | ! | @ | # | | |     | } | ] | ) | > |   |
+      // | ~ | ! | @ | # | | |     | ] | } | ) | > |   |
       // +---+---+---+---+---+     +---+---+---+---+---+
       //         | _ | > | ) |     |   |   |   |
       //         +---+---+---+     +---+---+---+
       bindings = <
-        &kp LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp RBRC      &kp LBRC &kp LBKT  &kp LPAR &kp LT   &none
+        &kp LBRC  &kp AMPS   &kp ASTRK   &kp LPAR  &kp RBRC      &kp LBKT &kp LBRC  &kp LPAR &kp LT   &none
         &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS      &none    &kp RSHFT &kp RGUI &kp LALT &kp RCTRL
-        &kp TILDE &kp EXCL   &kp AT      &kp HASH  &kp PIPE      &kp RBRC &kp RBKT  &kp RPAR &kp GT   &none
+        &kp TILDE &kp EXCL   &kp AT      &kp HASH  &kp PIPE      &kp RBKT &kp RBRC  &kp RPAR &kp GT   &none
                              &kp UNDER   &kp GT    &kp RPAR      &trans   &trans    &trans 
       >;
     };
