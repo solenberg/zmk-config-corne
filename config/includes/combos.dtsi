@@ -1,0 +1,138 @@
+/*
+                36 KEY MATRIX
+╭────────────────────┬────────────────────╮
+│  0   1   2   3   4 │  5   6   7   8   9 │
+│ 10  11  12  13  14 │ 15  16  17  18  19 │
+│ 20  21  22  23  24 │ 25  26  27  28  29 │
+╰───────╮ 30  31  32 │ 33  34  35 ╭───────╯
+        ╰────────────┴────────────╯        
+
+*/
+
+/ {
+
+  combos {
+    compatible = "zmk,combos";
+
+    combo_capswrd {
+      timeout-ms = <50>;
+      key-positions = <13 16>; // tap F and J to enable
+      bindings = <&caps_word 0>;
+      layers = <0>;
+    };
+
+    combo_cut {
+      timeout-ms = <50>;
+      key-positions = <21 22>; // tap X and C to cut text
+      bindings = <&kp LG(X)>;
+      layers = <0>;
+    };
+
+    combo_copy {
+      timeout-ms = <50>;
+      key-positions = <22 23>; // tap C and V to copy text
+      bindings = <&kp LG(C)>;
+      layers = <0>;
+    };
+
+    combo_paste {
+      timeout-ms = <50>;
+      key-positions = <23 24>; // tap V and B to paste text
+      bindings = <&kp LG(V)>;
+      layers = <0>;
+    };
+
+    combo_save {
+      timeout-ms = <50>;
+      key-positions = <11 12>; // tap S and D to save file
+      bindings = <&kp LG(S)>;
+      layers = <0>;
+    };
+
+    combo_lockscreen {
+      timeout-ms = <50>;
+      key-positions = <0 1>; // tap Q and W to lock screen
+      bindings = <&kp LC(LG(Q))>;
+      layers = <0>;
+    };
+
+    combo_lbrc {
+      timeout-ms = <50>;
+      key-positions = <6 7>; // tap U and I to type {
+      bindings = <&kp LBRC>;
+      layers = <0>;
+    };
+
+    combo_rbrc {
+      timeout-ms = <50>;
+      key-positions = <7 8>; // tap I and O to type }
+      bindings = <&kp RBRC>;
+      layers = <0>;
+    };
+
+    combo_lbkt {
+      timeout-ms = <50>;
+      key-positions = <16 17>; // tap J and K to type [
+      bindings = <&kp LBKT>;
+      layers = <0>;
+    };
+
+    combo_rbkt {
+      timeout-ms = <50>;
+      key-positions = <17 18>; // tap K and L to type ]
+      bindings = <&kp RBKT>;
+      layers = <0>;
+    };
+
+    combo_lpar {
+      timeout-ms = <50>;
+      key-positions = <26 27>; // tap I and O to type (
+      bindings = <&kp LPAR>;
+      layers = <0>;
+    };
+
+    combo_rpar {
+      timeout-ms = <50>;
+      key-positions = <27 28>; // tap I and O to type )
+      bindings = <&kp RPAR>;
+      layers = <0>;
+    };
+
+    combo_pipe {
+      timeout-ms = <50>;
+      key-positions = <6 16>;
+      bindings = <&kp PIPE>;
+      layers = <0>;
+    };
+
+    combo_tilde {
+      timeout-ms = <50>;
+      key-positions = <15 16>;
+      bindings = <&kp TILDE>;
+      layers = <0>;
+    };
+
+    combo_caret {
+      timeout-ms = <50>;
+      key-positions = <7 17>;
+      bindings = <&kp CARET>;
+      layers = <0>;
+    };
+
+    combo_semi {
+      timeout-ms = <50>;
+      key-positions = <18 19>;
+      bindings = <&kp SEMI>;
+      layers = <0>;
+    };
+
+    combo_dollar {
+      timeout-ms = <50>;
+      key-positions = <8 18>;
+      bindings = <&kp DOLLAR>;
+      layers = <0>;
+    };
+
+  };
+
+};
